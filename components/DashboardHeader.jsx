@@ -30,10 +30,14 @@ const DashboardHeader = ({ salary, salaryDate, onUpdateSalary, onUpdateDate, rem
             <div className="flex-1">
               <p className="text-[10px] text-slate-500 font-black uppercase tracking-widest mb-1">Monthly Inflow</p>
               <input
-                type="number"
+                type="Text"  
+                inputMode="numeric"
                 value={salary === 0 ? '' : salary}
                 placeholder="0.00"
-                onChange={(e) => onUpdateSalary(Number(e.target.value))}
+               onChange={(e) => {
+  const val = e.target.value.replace(/[^0-9]/g, '');
+  onUpdateSalary(val === '' ? 0 : Number(val));
+}}    
                 className="bg-transparent text-2xl font-black text-white focus:outline-none w-full font-mono placeholder:text-slate-800"
               />
             </div>
