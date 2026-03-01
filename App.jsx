@@ -160,7 +160,7 @@ const App = () => {
       <nav className="w-full md:w-20 lg:w-72 h-auto md:h-screen bg-slate-900/60 border-b md:border-b-0 md:border-r border-slate-800/50 p-4 lg:p-6 flex flex-row md:flex-col gap-3 md:gap-4 z-50 backdrop-blur-3xl shadow-2xl shrink-0 overflow-x-auto md:overflow-x-hidden md:overflow-y-auto scrollbar-hide">
         <div className="hidden md:flex items-center gap-4 mb-6 px-2 shrink-0">
            <div className="size-11 lg:size-12 bg-gradient-to-br from-indigo-500 to-purple-700 rounded-xl flex items-center justify-center shadow-xl border border-white/10 shrink-0">
-              <i className="fa-solid fa-crown text-white text-lg"></i>
+           <img src="\logo.svg" alt="Wealth Hub" className="w-full h-full object-contain p-1" />
            </div>
            <div className="hidden lg:block truncate">
               <h1 className="text-base font-black tracking-tighter text-white leading-none uppercase">Wealth Hub</h1>
@@ -344,7 +344,7 @@ const App = () => {
                       <span className="text-[12px] font-black text-emerald-400 uppercase tracking-widest">{state.expenses.length} Records found</span>
                     </div>
                  </div>
-                 <UnifiedLedger expenses={state.expenses} onRemove={removeExpense} salary={state.salary} user={user} />
+                 <UnifiedLedger expenses={state.expenses} onRemove={removeExpense} salary={state.salary} user={user}   />
               </div>
             )}
 
